@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting Message</title>
+    <script>
+        function displayGreeting() {
+            var currentDate = new Date();
+            var currentHour = currentDate.getHours();
+
+            var greeting;
+
+            if (currentHour < 12) {
+                greeting = "Good morning!";
+            } else if (currentHour < 18) {
+                greeting = "Good afternoon!";
+            } else {
+                greeting = "Good evening!";
+            }
+
+            alert(greeting);
+        }
+    </script>
+    <style>
+    .button {
+        font-weight:bolder;
+        background-color:aquamarine ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-radius: 5px;
+        outline: none; 
+        border:none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
+        
+      }
+      
+
+    </style>
+</head>
+<body>
+    <button class="button"onclick="displayGreeting()">Click to display greeting</button>
+</body>
+</html>
